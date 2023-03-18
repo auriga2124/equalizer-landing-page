@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor solution](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/equalizer-landing-page-using-flexbox-h-SiQDb5TP)
 - Live Site URL: [Live site at Netlify](https://auriga-equalizer.netlify.app/)
 
 ## My process
