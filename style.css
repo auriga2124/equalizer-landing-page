@@ -1,0 +1,466 @@
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul {
+    list-style: none;
+}
+
+/* Remove default link style */
+a {
+    text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* || Desktop first */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
+
+:root {
+    /* primary color */
+    --cyan: hsl(177, 68%, 64%);
+    --light-shade-brown: hsl(33, 100%, 70%);
+    --very-light-shade-red-orange: hsl(20, 33%, 98%);
+    --very-dark-side-blue-magenta: hsl(244, 23%, 12%);
+
+    /* secondary color */
+    --orange: hsl(12, 94%, 65%);
+
+    /* typography */
+    --heading-1 : 88px;
+    --heading-2: 40px;
+}
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 20px;
+    background-image: url(./assets/bg-main-desktop.png), url(./assets/bg-pattern-1.svg);
+    background-repeat: no-repeat;
+    background-position: left -300px top -250px, top -40px right 0;
+}
+
+.product-header {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header__title {
+    font-size: var(--heading-1);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--very-dark-side-blue-magenta);
+    margin-bottom: 40px;
+    padding-right: 8rem;
+}
+
+.product-header__description {
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--very-dark-side-blue-magenta);
+    margin-bottom: 108px;
+    padding-right: 18rem;
+}
+
+.concept {
+    display: flex;
+    gap: 8rem;
+    margin-top: 200px;
+    margin-bottom: 202px;
+    color: var(--very-light-shade-red-orange);
+    background-color: var(--very-dark-side-blue-magenta);
+    background-image: url(./assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top -50px left 340px;
+}
+
+.concept img {
+    width: 28%; /* 312px */
+    height: 642px;
+    flex: 0 0 312px;
+    margin-top: -200px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+}
+
+.concept__card {
+    width: 446px;
+    position: absolute;
+    top: 986px;
+    left: 734px;
+    border-radius: 12px;
+    padding: 58px 58px 48px 54px;
+    background: var(--orange);
+    display: flex;
+    flex-direction: column;
+}
+
+.cocept__card-heading {
+    font-size: var(--heading-2);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.concept__card-description {
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 39px;
+}
+
+.concept__card-price {
+    font-size: 3.25em; /* 65px : 20px = 3.25em */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 46px;
+}
+
+.concept__card-price span {
+    font-size: 0.3em; /* 20px : 65px = 0.3em */
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.btn {
+    width: 100%;
+    height: 61px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: -0.18px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--very-light-shade-red-orange);
+}
+
+.icon {
+    margin-right: 1rem;
+}
+
+.btn__ios {
+    background: var(--very-dark-side-blue-magenta);
+}
+
+.btn__android {
+    background: var(--very-light-shade-red-orange);
+    color: var(--very-dark-side-blue-magenta);
+}
+
+.btn__ios:hover {
+    background: var(--cyan);
+}
+
+.btn__android:hover {
+    background: var(--light-shade-brown);
+}
+
+.copy-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    margin-bottom: 124px;
+}
+
+.logo {
+    width: 30%;
+    height: 100%;
+    margin-bottom: 127px;
+    margin-top: 62px;
+}
+
+.logo-down {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.logo img {
+    width: 146px;
+    height: 32px;   
+}
+
+.copy-right {
+    margin-bottom: 91px;
+}
+
+.copy-right__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+}
+
+.copy-right__wrapper p {
+    flex: 0 0 324px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--very-dark-side-blue-magenta);
+}
+
+.copy-right__wrapper p span {
+    font-weight: 700;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials img {
+    height: 20px;
+    width: 20px;
+}
+
+.socials img:hover {
+    filter: invert(55%) sepia(62%) saturate(1642%) hue-rotate(327deg) brightness(103%) contrast(96%);
+    transition: ease-in-out 0.2s;;
+}
+
+/*---------- Breakpoint for tablet view ----------*/
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(./assets/bg-main-tablet.png), url(./assets/bg-pattern-1.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top -300px left -450px, top -40px right -40px;
+    }
+
+    .product-header {
+        margin: 0 2.5rem;
+    }
+
+    .logo {
+        margin-bottom: 95px;
+    }
+
+    .product-header__title {
+        font-size: 64px;
+        line-height: 1;
+        letter-spacing: -0.73px;
+        margin-bottom: 28px;
+        padding-right: 5rem;
+    }
+
+    .product-header__description {
+        font-size: 18px;
+        line-height: 1.5;
+        padding-right: 11rem;
+        margin-bottom: 50px;
+    }
+
+    .concept {
+        background-position: top -50px left 200px;
+        border-radius: 12px;
+        margin-bottom: 183px;
+    }
+
+    .concept img {
+        height: 548px;
+        flex: 0 0 250px;
+        margin-top: -138px;
+        margin-left: 70px;
+    }
+
+    .concept__card {
+        width: 52vw;
+        position: absolute;
+        top: 914px;
+        left: 270px;
+        padding: 48px;
+    }
+
+    .concept__card-heading {
+        font-size: 32px;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .concept__card-description {
+        font-size: 18px;
+        line-height: 1.55;
+        margin-bottom: 36px;
+        padding-right: 0rem;
+    }
+
+    .concept__card-price {
+        margin-bottom: 32px;
+    }
+
+    .copy-right {
+        flex-wrap: wrap;
+        gap: 32px;
+        margin-bottom: 85px;
+    }
+
+    .logo-down {
+        margin-bottom: 32px;
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .socials p {
+        flex: 0 0 330px;
+    }
+}
+
+/*---------- Breakpoint for mobile view ---------*/
+@media screen and (max-width: 395px) {
+    body {
+        background-image: url(./assets/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top -240px left 0;
+    }
+
+    .product-header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        margin-top: 40px;
+        margin-bottom: 64px;
+    }
+
+    .product-header__title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        letter-spacing: -0.45px;
+        padding-right: 0;
+    }
+
+    .product-header__description {
+        font-size: 16px;
+        line-height: 1.6;
+        padding-right: 12px;
+    }
+
+    .concept {
+        display: block;
+        width: 100vw;
+        margin-top: 116px;
+        margin-bottom: 515px;
+        margin-left: -24px;
+        background-position: top -50px left 36px;
+    }
+
+    .concept img {
+        width: 56%;
+        height: 430px;
+        margin-top: -103px;
+        margin-left: 80px;
+    }
+
+    .concept__card {
+        width: 100vw;
+        padding: 48px 36px;
+        left: 0;
+        top: 1020px;
+    }
+
+    .copy-right {
+        margin-bottom: 80px;
+        gap: 0;
+    }
+
+    .copy-right__wrapper {
+        gap: 64px;
+    }
+
+    .copy-right__wrapper p {
+        padding-right: 27px;
+    }
+
+    .logo-down {
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+
+    .socials {
+        gap: 20px;
+    }
+
+    .socials p {
+        flex-basis: 295px;
+    }
+}
